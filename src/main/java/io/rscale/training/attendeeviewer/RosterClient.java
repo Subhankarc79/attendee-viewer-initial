@@ -12,7 +12,7 @@ public interface RosterClient {
 
     PagedResources<Attendee> getAttendees(@RequestParam("page") int page);
 
-    @RequestMapping(method = RequestMethod.GET, value = "/people/uuid")
+    @RequestMapping(method = RequestMethod.GET, value = "/people/{uuid}")
     Attendee getAttendee(@PathVariable("uuid") String attendeeId);
 
     

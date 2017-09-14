@@ -1,0 +1,14 @@
+--- 
+applications: 
+  - 
+    buildpack: java_buildpack
+    instance: 1
+    memory: 1G
+    name: attendee-viewer
+    #path: "C:\\PCF\\roster.jar"
+    #random-route: true
+    services: 
+      #- sc_db_mysql_company
+      - SC_CF_LOG_DRAIN
+      - my_config_server_svc
+    timeout: 180

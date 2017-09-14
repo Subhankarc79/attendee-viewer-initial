@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "company")
 public interface CompanyClient {
 
+	@RequestMapping(method = RequestMethod.GET, value = "/companies")
 	PagedResources<Company> getCompanies(@RequestParam("page") int page);
 
-    @RequestMapping(method = RequestMethod.GET, value = {"/companies","/companies/{id}"})
+    @RequestMapping(method = RequestMethod.GET, value = "/companies/{id}")
     Company getCompany(@PathVariable("id") String id);
 	
 	//Company getCompany(String id);

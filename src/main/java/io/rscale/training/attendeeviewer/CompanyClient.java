@@ -12,7 +12,7 @@ public interface CompanyClient {
 
 	PagedResources<Company> getCompanies(@RequestParam("page") int page);
 
-    @RequestMapping(method = RequestMethod.GET, value = "/companies/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = {"/companies","/companies/{id}"})
     Company getCompany(@PathVariable("id") String id);
 	
 	//Company getCompany(String id);
